@@ -65,11 +65,11 @@ export default function TypographyPage() {
       <CardBody>
         <div className={classes.typo}>
           
-          <h3><a target="_parent" href = "https://sonalisuri.github.io/MaskDetection/">Slow mask detection</a></h3>
+          <h3><a target="_parent" href = "https://sonalisuri.github.io/MaskDetectionSlow/">Slow mask detection</a></h3>
         </div>
         <div className={classes.typo}>
           
-          <h3><a target="_parent" href = "https://sonalisuri.github.io/MaskDetection/">Fast mask detection</a></h3>
+          <h3><a target="_parent" href = "https://sonalisuri.github.io/MaskDetectionFast/">Fast mask detection</a></h3>
         </div>
       </CardBody>
     </Card>
