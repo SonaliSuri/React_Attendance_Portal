@@ -71,6 +71,11 @@ export default function TypographyPage() {
           
           <h3><a target="_parent" href = "https://sonalisuri.github.io/MaskDetectionFast/">Fast mask detection</a></h3>
         </div>
+        <div className={classes.typo}>
+          
+          <h3><a target="_parent" href = "https://sonalisuri.github.io/ThermalImaging/">Thermal Imaging</a></h3>
+        </div>
+        
       </CardBody>
     </Card>
   );

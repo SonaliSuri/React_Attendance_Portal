@@ -35,12 +35,12 @@ import NotificationsPage from "views/Notifications/Notifications.js";
 import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 // core components/views for RTL layout
 import RTLPage from "views/RTLPage/RTLPage.js";
+import { SentimentSatisfied } from "@material-ui/icons";
 
 const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Home",
-    rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
     layout: "/admin"
@@ -48,7 +48,6 @@ const dashboardRoutes = [
   {
     path: "/user",
     name: "Student Profile",
-    rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
     layout: "/admin"
@@ -56,7 +55,6 @@ const dashboardRoutes = [
   {
     path: "/table",
     name: "View Student List",
-    rtlName: "قائمة الجدول",
     icon: "content_paste",
     component: TableList,
     layout: "/admin"
@@ -64,7 +62,6 @@ const dashboardRoutes = [
   {
     path: "/typography",
     name: "Attendance and mask detection",
-    rtlName: "طباعة",
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin"
@@ -72,9 +69,8 @@ const dashboardRoutes = [
 
   {
     path: "/maps",
-    name: "Maps",
-    rtlName: "خرائط",
-    icon: LocationOn,
+    name: "COVID-19 Awareness",
+    icon: SentimentSatisfied,
     component: Maps,
     layout: "/admin"
   }

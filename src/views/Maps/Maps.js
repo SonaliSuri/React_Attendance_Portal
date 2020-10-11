@@ -1,93 +1,44 @@
-import React from "react";
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker
-} from "react-google-maps";
+import React, { useRef } from "react";
+import YouTube from "react-youtube";
 
-const CustomSkinMap = withScriptjs(
-  withGoogleMap(() => (
-    <GoogleMap
-      defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
-      defaultOptions={{
-        scrollwheel: false,
-        zoomControl: true,
-        styles: [
-          {
-            featureType: "water",
-            stylers: [
-              { saturation: 43 },
-              { lightness: -11 },
-              { hue: "#0088ff" }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.fill",
-            stylers: [
-              { hue: "#ff0000" },
-              { saturation: -100 },
-              { lightness: 99 }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }]
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }]
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }]
-          },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }]
-          },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }]
-          },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }]
-          }
-        ]
-      }}
-    >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
-    </GoogleMap>
-  ))
-);
+// ...
 
-export default function Maps() {
+const MyComponent = () => {
+  // Initialises a 'ref' for the player
+  const playerRef = useRef(null);
+
+  // You can now access the player in your component
+  // by using "playerRef.current.internalPlayer.API_METHOD"
+  // ... See below for an example:
+
+  // Our own custom function to pause the video
+  const pauseVideo = () => {
+    playerRef.current.internalPlayer.pauseVideo();
+  };
+
   return (
-    <CustomSkinMap
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-      loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `100vh` }} />}
-      mapElement={<div style={{ height: `100%` }} />}
-    />
+    <>
+      {/* Rest of your component */}
+      <table>
+        <tr>
+          <td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DCdxsnRF1Fk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </td>
+          <td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iP6utI4Dw1U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ObVGT5TzGOM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </td>
+          <td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3BVQ9Scdglg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </td>
+        </tr>
+  </table>
+    </>
   );
-}
+};
+
+export default MyComponent;
